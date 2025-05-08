@@ -1,3 +1,5 @@
+import { Brain, Code, Layout } from "lucide-react";
+
 export const AboutSection = () => {
   return (
     <section id="about" className="py-24 px-4 relative">
@@ -39,7 +41,54 @@ export const AboutSection = () => {
 
           {/* skills */}
           <div className="grid grid-cols-1 gap-6">
+            <div className="gradient-border p-6 card-hover">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-full bg-primary/10">
+                  <Code className="h-6 w-6 text-primary" />
+                </div>
+                <div className="text-left">
+                  <h4 className="text-lg font-semibold">
+                    Full Stack Developement
+                  </h4>
+                  <p className="text-muted-foreground">
+                    Building robust and scalable web applications using the MERN
+                    stack, from crafting APIs to designing interactive
+                    frontends.
+                  </p>
+                </div>
+              </div>
+            </div>
 
+            <div className="gradient-border p-6 card-hover">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-full bg-primary/10">
+                  <Layout className="h-6 w-6 text-primary" />
+                </div>
+                <div className="text-left">
+                  <h4 className="text-lg font-semibold">Frontend Design</h4>
+                  <p className="text-muted-foreground">
+                    Creating clean, responsive, and user-friendly interfaces
+                    with React, focusing on performance and intuitive UX.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="gradient-border p-6 card-hover">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-full bg-primary/10">
+                  <Brain className="h-6 w-6 text-primary" />
+                </div>
+                <div className="text-left">
+                  <h4 className="text-lg font-semibold">Problem Solving</h4>
+                  <p className="text-muted-foreground">
+                    Tackling complex challenges with logical thinking and
+                    efficient code, applying data structures and algorithms to
+                    real-world projects.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
