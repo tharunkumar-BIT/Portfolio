@@ -44,7 +44,7 @@ export const ContactSection = () => {
                 <div className="p-3 rounded-full bg-primary/10">
                   <Mail className="h-6 w-6 text-primary" />
                 </div>
-                <div className="min-w-[220px]">
+                <div className="min-w-[280px]">
                   <h4 className="font-medium">Email</h4>
                   <a
                     href="mailto:stharunkumartks@gmail.com"
@@ -58,7 +58,7 @@ export const ContactSection = () => {
                 <div className="p-3 rounded-full bg-primary/10">
                   <Phone className="h-6 w-6 text-primary" />
                 </div>
-                <div className="min-w-[220px]">
+                <div className="min-w-[280px]">
                   <h4 className="font-medium">Phone</h4>
                   <a
                     href="tel:+918248629278"
@@ -72,7 +72,7 @@ export const ContactSection = () => {
                 <div className="p-3 rounded-full bg-primary/10">
                   <MapPin className="h-6 w-6 text-primary" />
                 </div>
-                <div className="min-w-[220px]">
+                <div className="min-w-[280px]">
                   <h4 className="font-medium">Location</h4>
                   <a className="text-muted-foreground hover:text-primary transition-colors">
                     Mettupalayam, Coimbatore
