@@ -42,7 +42,7 @@ const projects = [
 
 export const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-24 px-4 relative">
+    <section id="projects" data-aos="fade-up" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
           Featured <span className="text-primary"> Projects</span>
@@ -55,6 +55,7 @@ export const ProjectsSection = () => {
           {projects.map((project, key) => (
             <div
               key={key}
+              data-aos="flip-left"
               className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover flex flex-col h-full"
             >
               <div className="h-45 overflow-hidden">
@@ -66,8 +67,11 @@ export const ProjectsSection = () => {
               </div>
               <div className="p-6 flex flex-col h-full">
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag) => (
-                    <span className="px-2 py-1 text-xs font-medium rounded-full border border-primary/30 bg-primary/20 text-foreground/80">
+                  {project.tags.map((tag, key) => (
+                    <span
+                      key={key}
+                      className="px-2 py-1 text-xs font-medium rounded-full border border-primary/30 bg-primary/20 text-foreground/80"
+                    >
                       {tag}
                     </span>
                   ))}
