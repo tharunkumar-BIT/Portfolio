@@ -13,6 +13,24 @@ const navItems = [
 export const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    const storedTheme = localStorage.getItem("theme");
+    const isDark =
+      storedTheme === "dark" ||
+      (!storedTheme &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches);
+    setIsDarkMode(isDark);
+    document.documentElement.classList.toggle("dark", isDark);
+  }, []);
+
+  const toggleTheme = () => {
+    const newMode = !isDarkMode;
+    setIsDarkMode(newMode);
+    document.documentElement.classList.toggle("dark", newMode);
+    localStorage.setItem("theme", newMode ? "dark" : "light");
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,13 +74,28 @@ export const NavBar = () => {
 
         {/* mobile navbar */}
 
-        <button
-          onClick={() => setIsMenuOpen((prev) => !prev)}
-          className="md:hidden p-2 text-foreground z-50"
-          aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="flex items-center space-x-3 md:hidden z-50">
+          {/* Theme slide switch */}
+          <button
+            onClick={toggleTheme}
+            className="w-12 h-6 flex items-center rounded-full px-1 bg-border transition-colors duration-300"
+          >
+            <div
+              className={`w-4 h-4 rounded-full bg-primary transform transition-transform duration-300 ${
+                isDarkMode ? "translate-x-6" : "translate-x-0"
+              }`}
+            ></div>
+          </button>
+
+          {/* Menu icon toggle */}
+          <button
+            onClick={() => setIsMenuOpen((prev) => !prev)}
+            className="p-2 text-foreground"
+            aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
 
         <div
           className={cn(
