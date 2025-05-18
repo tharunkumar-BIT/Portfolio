@@ -15,7 +15,7 @@ const projects = [
       "MongoDB",
       "TailwindCSS",
     ],
-    demoUrl: "#",
+    demoUrl: "https://pinterest-clone-x07h.onrender.com/",
     githubUrl: "https://github.com/tharunkumar-BIT/Pinterest_clone",
   },
   {
