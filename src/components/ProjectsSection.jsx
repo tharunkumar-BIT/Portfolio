@@ -3,6 +3,17 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
+    title: "Automated Delivery Locker System",
+    description:
+      "A Full stack project where my role is to create a Strong and secure backend using NodeJS",
+    image: "/projects/delivery_locker.webp",
+    tags: ["NodeJS", "ExpressJS", "MongoDB", "Node cron"],
+    demoUrl: "#",
+    githubUrl:
+      "https://github.com/AcesOfBIT/Automated-Delivery-Locker-System-with-Facial-Recognition/tree/backend",
+  },
+  {
+    id: 2,
     title: "Pinterest Clone",
     description:
       "A Clone of a existing web application, Pinterest, using React, NodeJS, MongoDB, TailwindCSS",
@@ -19,7 +30,7 @@ const projects = [
     githubUrl: "https://github.com/tharunkumar-BIT/Pinterest_clone",
   },
   {
-    id: 2,
+    id: 3,
     title: "Smart Parking System",
     description:
       "A real-time Full stack project for large scale vehicle parking system",
@@ -28,16 +39,16 @@ const projects = [
     demoUrl: "#",
     githubUrl: "https://github.com/tharunkumar-BIT/Smart_parking_system",
   },
-  {
-    id: 3,
-    title: "Home Automation",
-    description:
-      "A hardware project for automating the Home appliances using Google Assistant",
-    image: "/projects/homeAutomation.jpg",
-    tags: ["Arduino UNO", "Nodemcu ESP8266", "Google Assistant"],
-    demoUrl: "#",
-    githubUrl: "https://github.com/tharunkumar-BIT/Home-automation",
-  },
+  // {
+  //   id: 3,
+  //   title: "Home Automation",
+  //   description:
+  //     "A hardware project for automating the Home appliances using Google Assistant",
+  //   image: "/projects/homeAutomation.jpg",
+  //   tags: ["Arduino UNO", "Nodemcu ESP8266", "Google Assistant"],
+  //   demoUrl: "#",
+  //   githubUrl: "https://github.com/tharunkumar-BIT/Home-automation",
+  // },
 ];
 
 export const ProjectsSection = () => {
