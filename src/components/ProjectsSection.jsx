@@ -6,7 +6,7 @@ const projects = [
     title: "Automated Delivery Locker System",
     description:
       "A Full stack project where my role is to create a Strong and secure backend using NodeJS",
-    image: "/projects/delivery_locker.webp",
+    image: "/projects/delivery_locker.jpg",
     tags: ["NodeJS", "ExpressJS", "MongoDB", "Node cron"],
     demoUrl: "#",
     githubUrl:
